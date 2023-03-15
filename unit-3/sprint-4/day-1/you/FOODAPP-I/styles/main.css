@@ -1,0 +1,54 @@
+body{
+    margin:0%;
+
+}
+#food{
+    display: inline-grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    /* background-color: #2D2013; */
+}
+#food div {
+    display:grid;
+    margin-bottom: 10%;
+    justify-items: center;
+}
+#navbar {
+    border:1px solid black;
+    height:80px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2%;
+    background-color: #23180D;
+    color:white;
+   
+}
+#lhs {
+     flex:4;
+    display: flex;
+    align-items: center;
+    
+    }
+#lhs img{
+    width:40%;
+    }
+#lhs h4 {
+        margin-left: 4%;
+    }
+#rhs {
+        flex:3;
+        display: flex;
+        align-items:center;
+        justify-content:space-evenly; 
+    }
+#rhs img{
+       width:4%;
+    }
+#rhs button {
+    background-color: red;
+    
+}
+

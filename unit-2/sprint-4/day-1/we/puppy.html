@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOCUMENT</title>
+    <style>
+        button{
+            background-color: teal;
+            border:0;
+            padding:10px 15px;
+            margin:20px 30px;
+        }
+        p{
+            font-weight: bold;
+        }
+    </style>
+    </head>
+    <div>
+        <img src="https://cdn.pixabay.com/photo/2016/12/13/05/15/puppy-1903313__340.jpg" 
+        alt=""/>
+        <div>
+            <p>Likes:-<span id="likeOut"></span></p>
+            <p>Dislikes:-<span id="dislikeOut"></span></p>
+        </div>
+        <div>
+            <button>Like</button>
+            <button>Dislike</button>
+        </div>
+        
+
+    </body>
+    </html>
+    <script>
+        let likeCount=0;
+        document.getElementById("likeOut").innerText=likeCount;
+
+        let dislikeCount=0;
+        document.getElementById("dislikeOut").innerText=dislikeCount;
+
+       
+    document.querySelector("div>button").addEventListener("click",likeFunc);
+         function likeFunc() {
+           
+           likeCount++;
+           document.getElementById("likeOut").innerText=likeCount;
+           localStorage.setItem("puppyLike",likeCount)
+        }
+    document.querySelector("button+button").addEventListener("click",dislikeFunc);
+
+         function dislikeFunc(){
+          
+           dislikeCount++;
+           document.getElementById("dislikeOut").innerText=dislikeCount;
+           localStorage.setItem("puppyDislike",dislikeCount)
+         }
+
+    </script>
+
+
+
+

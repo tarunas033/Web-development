@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        form {
+            width: 20%;
+        }
+
+        input {
+            margin-top: 10%;
+        }
+
+        button {
+            margin-top: 2%;
+        }
+
+        #login-form {
+            display: none;
+        }
+
+        input[type="text"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        input[type="password"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        form {
+            width: 400px;
+            border: 1px solid rgb(230, 230, 230);
+            margin: 3% auto;
+            padding: 3%;
+            background: white;
+        }
+
+        button {
+            background-color: grey;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="register-form">
+            <h1> Register</h1>
+            <form action="">
+                <input type="text" id="name" placeholder="name">
+                <input type="email" id="email" placeholder="email">
+                <input type="text" id="username" placeholder="username">
+                <input type="password" id="password" placeholder="password">
+                <input type="number" id="mobile" placeholder="mobile">
+                <input type="text" id="description" placeholder="description">
+            </form>
+            <button onclick="Register()"> Register</button>
+        </div>
+        <div id="login-form">
+            <h1>Login</h1>
+            <form>
+                <input type="text" id="login-username" placeholder="username">
+
+                <input type="password" id="login-password" placeholder="password">
+            </form>
+            <button onclick="Login()"> Login </button>
+        </div>
+
+    </div>
+</body>
+
+</html>
+
+<script src="auth.js"></script>

@@ -1,0 +1,13 @@
+{
+  "name": "day-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "ts_1": "tsc src/2.ts"
+    
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

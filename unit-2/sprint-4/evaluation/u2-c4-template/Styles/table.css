@@ -1,0 +1,53 @@
+/* Write all the code related to the table here  */
+table {
+    border:1px solid;
+    margin:auto;
+    width:80%;
+}
+th{
+    font-weight: bold;
+    text-align: center;
+    background-color:yellow;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+} 
+
+tr{
+    text-align:center;
+    background-color: azure;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+navbar>div{
+    display:grid;
+    justify-content: space-between;
+    justify-items: center;
+    grid-template-columns: repeat(4,1fr);
+    width:80%;
+    margin:auto;
+}
+h1,h2{
+    text-align:center;
+
+}
+form{
+    display:grid;
+    grid-template-rows: repeat(6,1fr);
+    gap:4px;
+    font-weight: bold;
+    margin:auto;
+    padding:10px 10px;
+    height:200px;
+
+}
+#create{
+    width:420px;
+    margin:auto;
+    margin-top:20px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+#create>h1{
+    padding-top: 20px;
+}
+#create>form{
+    padding-top: 0px;
+}

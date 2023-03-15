@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #slider img{
+            width: 100%;
+            height: 450px;
+        }
+        #loader{
+            text-align: center;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+        #basic,#movies{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            width: 80%;
+           margin: auto;
+          gap: 5%;
+            margin-top: 5%;
+            text-align: center;
+        }
+        #basic,#movies img{
+           width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- <a href="search.html">Search</a>
+    <div id="slider"></div>
+    <div id="buttons">
+        <button onclick="sortLH()"> IMDB-Low to High</button>
+        <button onclick="sortHL()"> IMDB-High to Low</button>
+    </div> -->
+    <div id="basic">
+        <img id="loader" src="https://miro.medium.com/max/1050/1*CsJ05WEGfunYMLGfsT2sXA.gif" alt="">
+    </div>
+</body>
+</html>
+<script>
+const movies=[
+    {
+       name:"Cuttputli",
+       imdb:7.5,
+       release_date:2022,
+       img:"https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_1x/sources/r1/cms/prod/9120/1329120-v-9e795ba36f30", 
+    },
+    {
+        name:"Chichore",
+        imdb:"8.5",
+        release_date:"2019",
+        img:"https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/896/580896-v", 
+     },
+     {
+        name:"Super-30",
+        imdb:"9.0",
+        release_date:"2022",
+        img:"https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/6828/556828-v", 
+     },
+     {
+        name:"Missin-Mangal",
+        imdb:"7.5",
+        release_date:"2021",
+        img:"https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/1529/571529-v", 
+     },
+     {
+        name:"Housefull-4",
+        imdb:"6.5",
+        release_date:"2019",
+        img:"https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/3669/593669-v", 
+     },
+     {
+        name:"Baghi-3",
+        imdb:"5.5",
+        release_date:"2021",
+        img:"https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_1x/sources/r1/cms/prod/6536/846536-v", 
+     },
+     {
+        name:"M.S-Dhoni",
+        imdb:"7.5",
+        release_date:"2016",
+        img:"https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/old_images/vertical/MOVIE/3314/1770003314/1770003314-v", 
+     },
+     {
+        name:"Sipderman",
+        imdb:"8.0",
+        release_date:"2002",
+        img:"https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/2350/1282350-v-15ffecf89380", 
+     },
+     {
+        name:"83",
+        imdb:"9.0",
+        release_date:"2022",
+        img:"https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/608/1160608-v-8680160dd6b2", 
+     },
+
+];
+
+
+
+
+// function slideShow(){
+//     const arr=[
+//        " https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1_5x/sources/r1/cms/prod/9119/1329119-h-ef64fcf3d1f9",
+//        " https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1_5x/sources/r1/cms/prod/7976/1317976-h-e672d8d911fe",
+//        " https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1_5x/sources/r1/cms/prod/3064/1323064-h-dcaae091e676",
+//     ];
+//     let i=0;
+//     let div=document.getElementById("slider");
+//     let img=document.createElement("img");
+//     img.src=arr[0];
+//     div.append(img);
+//     i=i+1;
+
+//     setInterval(function(){
+//         if(i==3){
+//             i=0;
+//         }
+//         img.src=arr[i];
+//         i=i+1;
+//         div.append(img);
+
+//     },3000)
+
+// }
+// slideShow();
+
+localStorage.setItem("moviess",JSON.stringify(movies));
+
+let data=JSON.parse(localStorage.getItem("moviess"));
+
+function appendMovies(data){
+    let data_div=document.getElementById("basic") || document.getElementById("movies")
+    data_div.innerHTML=null;
+    data_div.id="movies";
+
+    data.forEach(function(el){
+        let div=document.createElement("div");
+        
+        let name=document.createElement("p");
+        name.innerText=`Name ${el.name}`;
+
+        let imdb=document.createElement("p");
+        imdb.innerText=`IMDB ${el.imdb}`;
+        
+        let img=document.createElement("img");
+        img.id="poster";
+        img.src=el.img;
+
+        div.append(img,name,imdb);
+        data_div.append(div);
+    })
+
+}
+
+let mypromise=new Promise(function (resolve,reject){
+
+
+    setTimeout(function(){
+        let data=movies;
+        if(data != null){
+            resolve(data)
+        }else{
+            reject ("issue from server")
+        }
+    },2000)
+
+})
+
+async function main(){
+    try{
+        let response=await mypromise
+        appendMovies(response)
+
+    }
+    catch(error){
+        console.log("error",error)
+    }
+
+}
+main();
+
+
+// function sortLH(){
+//     let data=JSON.parse(localStorage.getItem("moviess"));
+//     let sort =data.sort((a,b) => a.imdb - b.imdb );
+//     // let sort = data.sort(function low(a,b){
+//     //     return a.imdb - b.imdb;
+//     // })
+//     // low();
+//     console.log(sort);
+//     appendMovies(sort);
+
+// }
+// function sortHL(){
+//     let data=JSON.parse(localStorage.getItem("moviess"));
+//     let sort=data.sort((a,b) => b.imdb - a.imdb );
+//     appendMovies(sort)
+// }
+
+</script>

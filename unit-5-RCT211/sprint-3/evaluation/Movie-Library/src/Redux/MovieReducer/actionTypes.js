@@ -1,0 +1,11 @@
+//Movies
+export const MOVIE_REQUEST ="MOVIE_REQUEST";
+
+export const MOVIE_FAILURE = "MOVIE_FAILURE";
+
+export const GET_MOVIE_SUCCESS = "GET_MOVIE_SUCCESS";
+
+export const POST_MOVIE_SUCCESS = "POST_MOVIE_SUCCESS";
+
+
+

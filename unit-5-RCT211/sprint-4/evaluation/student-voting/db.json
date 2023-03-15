@@ -1,0 +1,28 @@
+{
+  "student": [
+    {
+      "name": "Ankush",
+      "image": "https://via.placeholder.com/350",
+      "code": "fw14_003",
+      "batch": "Web - 14",
+      "vote": 4,
+      "id": 3
+    },
+    {
+      "name": "taruna",
+      "image": "https://via.placeholder.com/350",
+      "vote": 8,
+      "batch": "web-18",
+      "code": "fw20_0232",
+      "id": 4
+    },
+    {
+      "name": "Aditya",
+      "image": "",
+      "vote": 0,
+      "batch": "web-01",
+      "code": "fw01_001",
+      "id": 5
+    }
+  ]
+}

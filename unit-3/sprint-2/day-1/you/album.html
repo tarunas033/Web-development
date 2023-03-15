@@ -1,0 +1,51 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img{
+        width: 100%;
+        height: 400px;
+    }
+</style>
+<body>
+    <button onclick="start()">Start</button>
+    <button onclick="stop()">Stop</button>
+    <div id="container"></div>
+</body>
+</html>
+<script>
+let id;
+function start(){
+    let images=JSON.parse(localStorage.getItem("images"))||[]
+    
+    let container=document.getElementById("container")
+    container.innerHTML=null
+    let img=document.createElement("img")
+    let i=0;
+    img.src=images[0];
+    container.append(img)
+    i++   // to show 2nd second image just after without showing 1st one again after interval  
+
+    
+    id=setInterval(function(){
+       
+        if(i==5){
+            i=0
+        }
+        img.src=images[i]
+        container.append(img);
+        console.log(i);
+        i++;
+
+    },3000)
+
+}
+function stop(){
+    clearInterval(id)
+}
+</script>

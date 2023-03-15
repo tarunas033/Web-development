@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input{
+        width:200px;
+    }
+    #movies{
+        border:1px solid black;
+        height:200px;
+        width:205px;
+
+}
+    
+</style>
+
+<body>
+    <!-- <h1>debouncing</h1> -->
+
+    <input oninput="main()" type="text" id="query"/>
+
+    <div id ="movies"></div>
+
+</body>
+</html>
+<script>
+
+async function main () {
+    try{
+    let query = document.getElementById('query').value;
+
+    console.log('query:', query);
+   
+    
+ let res = await fetch (`http://www.omdbapi.com/?apikey=24150286&s=${query}`);
+   //omdb data(movie data)
+   let data = await res.json();
+   console.log('data:',data);
+
+   let actual_data = data.Search;
+//   console.log('actual_data:',actual_data);
+  appendMovies(actual_data);
+} catch (err) {
+  console.log('err:',err) ;
+  }
+
+}
+
+
+function appendMovies(data) {
+    movies_div.innerHTML = null;
+    data.forEach(function (el){
+        let p = document.createElement('p');
+        p.innerText = el.Title;
+
+        movies_div.append(p);
+    });
+}
+ function debounce (func, delay) {
+
+
+
+
+    
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

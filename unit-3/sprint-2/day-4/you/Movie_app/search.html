@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        #movies{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            width: 80%;
+            margin: auto;
+            gap: 5%;
+            text-align: center;
+        }
+        #movies img{
+            width: 100%;
+        }
+        #nav{
+            display: flex;
+            justify-content: space-between;
+        }
+       #nav>div{
+        margin-top: 65px;
+        color: aliceblue;
+        font-weight: bolder;
+       }
+       *{
+        background-color: black;
+       }
+       h1{
+        color: white;
+        font-size: 50px;
+       }
+       input{
+        color: white;
+       }
+       p{
+        color: white;
+       }
+       #movies>div:hover{
+        box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+       }
+    </style> -->
+</head>
+<body>
+    <div id="nav">
+        <!-- <input type="text" name="" id="query">
+        <button onclick="searchMovies()">Search</button> -->
+        <h1>Hotstar</h1>
+       <div> search movie: <input oninput="debouncing(search,2000)" name="" id="query"></div>
+    </div>
+
+    <div id="movies">
+       <div> <img id="loader" src="" alt=""></div>
+    </div>
+</body>
+</html>
+<script src="search.js"></script>

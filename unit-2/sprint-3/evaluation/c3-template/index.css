@@ -1,0 +1,43 @@
+/* Write all the necessery css  */
+div{
+    
+    height:320px;
+    width:500px;
+    margin:auto;
+    text-align: center;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+
+}
+div>form{
+    display:grid;
+    grid-template-columns: repeat(1,1fr);
+    }
+div>h1{
+    width:100%;
+
+}
+form>input,select{
+    height:30px;
+    margin:3px 3px;
+}
+h1{
+    text-align: center;
+}
+th{
+
+    font-size: x-large;
+    box-shadow: rgb(0, 0 ,0 ,0.24);
+    background-color: darkorange;
+    gap:3px;
+    margin:auto;
+
+}
+input:nth-child(6){
+    border-color: blue;
+
+}
+table{
+    width:80%;
+    margin:auto;
+}
+

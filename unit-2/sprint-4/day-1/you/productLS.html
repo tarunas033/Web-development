@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOCUMENT</title>
+    <style>
+       
+
+
+    </style>
+    <body>
+        <div id="create">
+            
+            <img src="https://sso.masaischool.com/brand_dark.svg" alt=""/>
+            <h1>Sign Up</h1>
+    
+        
+            <form>
+                <input placeholder="Enter your Full Name" id="name" type="text" />
+                <br>
+                <input placeholder="Enter email" id="email" type="text"/>
+                <br>
+                <input placeholder="Enter Password" id="pass" type="number"/>
+                <br>
+                <input type="Submit" value="SIGN UP"/>
+                
+
+            </form>
+     </div>
+    </body>
+    </head>
+    </html>
+    <script>
+
+let form=document.querySelector("form");
+form.addEventListener("submit",function(e){
+    e.preventDefault();
+    let obj={
+        name:form.name.value,
+        email:form.email.value,
+        password:form.password.value,
+        }
+    //console.log(obj);
+    //display(obj);
+    if(obj.email=="" || obj.password=="" ||obj.mobile=="")
+     })
+
+
+
+
+
+    </script>
+
+

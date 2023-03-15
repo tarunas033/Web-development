@@ -1,0 +1,82 @@
+<script>
+    // myMap function start
+
+    Array.prototype.mymap = function (callback) {
+
+      const resultArray = [];
+
+      for(let index=0; index<this.length; index++){
+          resultArray.push(callback(this[index], index, this));
+     }
+     return resultArray ;
+
+  }
+     console.log([1,2,3].mymap(function(value){
+      return value = 2
+     }));
+
+
+     // myFilter function
+     Array.prototype.myFilter = function(callback) {
+      const filterArr = [];
+      for(let index=0; index<this.length; index++) {
+          if(!!callback(this[index], index, this)) {
+              filterArr.push(this[index]);
+          }
+         
+      }
+          return filterArr;
+  }
+   let name=['Pandya','virat','Dhoni'];
+   let filterName = name.myFilter(function(name){
+
+      return name !='virat';
+   });
+   console.log(filterName)
+
+
+
+      // myReduce function
+      Array.prototype.myReduce = function(callback, accumulator) {
+    if( this.length < 1){
+      throw new Error ("Array is Empty")
+   }
+
+   if( ! accumulator ){
+      if(typeof this[0]==="string"){
+          accumulator = '';
+
+      } else if (typeof this[0]==="number") {
+          accumulator = 0 ;
+      }
+    }
+   for(let index=0; index<this.length; index++){
+         accumulator = callback(accumulator,this[index]);
+   }
+     return accumulator;
+  }
+    let result= name.myReduce(function(acc,el){
+       return acc + " " + el
+    },0)
+  console.log(result);
+
+
+
+     //myEach function
+
+     Array.prototype.myEach = function (callback) {
+
+      const resultArray = [];
+
+      for(let index=0; index<this.length; index++) {
+      resultArray.push(callback(this[index], index, this));
+  }
+      return resultArray;
+}
+
+ let arr = [1,2,3]
+ arr.myEach(function(value){
+  console.log(value ** 2)
+ });
+
+</script>

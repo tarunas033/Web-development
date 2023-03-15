@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <style>
+      #navbar{
+        border:2px solid;
+        display:grid;
+        justify-content: space-between;
+        grid-template-columns: repeat(4,1fr);
+        width:80%;
+        margin:auto;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="navbar">
+      <!--Add navbar divs here-->
+      <h1>Login</h1>
+      <p>SignIn</p>
+      <p>Products</p>
+        <!-- Link to bucket.html -->
+      <p><a href="bucket.html">Bucket</a></p>
+      <div id="coffee_count">
+        <!--Show total number of coffee added to bucket here, do not add anything only Total count. Not even "Count - 5" but  only number like this "5" -->
+      </div>
+    </div>
+
+    <div id="menu">
+      <!--Show coffee list here in grid format-->
+      <!-- add an add to bucket button to each item, give it HTML id as 'add_to_bucket' -->
+    </div>
+  </body>
+</html>
+<script src="./scripts/index.js"></script>

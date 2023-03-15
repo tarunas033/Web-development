@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <title>Practise Selectors</title>
+  </head>
+  <body>
+    <h1>First H1</h1>
+    <h1>Second H1</h1>
+    <h3>First H3</h3>
+    <h3>Second H3</h3>
+    <h5>First H5</h5>
+    <h5>Second H5</h5>
+    <h5>Third H5</h5>
+    <div class="green">First DIV</div>
+    <div class="red">Second DIV</div>
+    <div class="blue">Third DIV</div>
+    <p class="green">First P</p>
+    <p class="red">Second P</p>
+    <p class="blue">Third P</p>
+    <hr />
+    <button onClick="changeH1()">Change H1</button>
+    <button onClick="changeH3()">Change H3</button>
+    <button onClick="changeH5()">Change H5</button>
+    <button onClick="changeGreen()">Change Green</button>
+    <button onClick="changeRed()">Change Red</button>
+    <button onClick="changeBlue()">Change Blue</button>
+    <script>
+      function changeH1() {
+        // the colour of first <h1> should turn to red
+           let a =document.querySelector("h1");
+           a.style.backgroundColor="red";
+            
+      }
+
+      function changeH3() {
+        // the colour of all <h3> should turn to green
+            let a= document.querySelectorAll("h3");
+            a[0].style.backgroundColor="green"
+            a[1].style.backgroundColor="green"
+      }
+
+      function changeH5() {
+        // the colour of all <h5> should turn to blue
+            let a= document.querySelectorAll("h5");
+            a[0].style.backgroundColor="blue"
+            a[1].style.backgroundColor="blue"
+            a[2].style.backgroundColor="blue"
+      }
+
+      function changeGreen() {
+        // all the elements with the class green should change to green
+        let a= document.querySelectorAll(".green");
+            a[0].style.backgroundColor="green"
+            a[1].style.backgroundColor="green"
+      }
+
+      function changeRed() {
+        // all the elements with the class red should change to red
+        let a= document.querySelectorAll(".red");
+            a[0].style.backgroundColor="red"
+            a[1].style.backgroundColor="red"
+           
+      }
+
+      function changeBlue() {
+        // all the elements with the class blue should change to blue
+        let a= document.querySelectorAll(".blue");
+            a[0].style.backgroundColor="blue"
+            a[1].style.backgroundColor="blue"
+      }
+    </script>
+  </body>
+</html>

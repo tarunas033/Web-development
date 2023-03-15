@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./styles/main.css"/> -->
+    <style>
+        body{
+    margin:0%;
+
+}
+#food{
+    display: inline-grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    /* background-color: #2D2013; */
+}
+#food div {
+    display:grid;
+    margin-bottom: 10%;
+    justify-items: center;
+}
+#navbar {
+    border:1px solid black;
+    height:80px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2%;
+    background-color: #23180D;
+    color:white;
+   
+}
+#lhs {
+     flex:4;
+    display: flex;
+    align-items: center;
+    
+    }
+#lhs img{
+    width:40%;
+    }
+#lhs h4 {
+        margin-left: 4%;
+    }
+#rhs {
+        flex:3;
+        display: flex;
+        align-items:center;
+        justify-content:space-evenly; 
+    }
+#rhs img{
+       width:4%;
+    }
+#rhs button {
+    background-color: red;
+    
+}
+
+    </style>
+
+</head>
+<body>
+    <div id="navbar">
+    <div id="lhs">
+        <img src ="https://www.themealdb.com/images/logo-small.png" alt=""/>
+        </div>
+        <div id="rhs">
+            <button>Home</button>
+            <h4>API</h4>
+            <h4>Forum</h4>
+            <img src="https://w7.pngwing.com/pngs/175/452/png-transparent-facebook-logo-facebook-icon-logo-facebook-icon-blue-text-rectangle-thumbnail.png" alt=""/>
+            <img src="https://w7.pngwing.com/pngs/708/311/png-transparent-icon-logo-twitter-logo-twitter-logo-blue-social-media-area-thumbnail.png" alt=""/>
+        <a href="search.html"><input type="text" placeholder="Search"></a>
+        </div>
+        </div>
+
+    
+    
+    
+        
+    <div id="food"></div>
+    <!-- here food appends -->
+    
+</body>
+</html>
+<scripts type="module" src="index.js"></scripts>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/cart.css" />
+    <title>Cart</title>
+    <style>
+      #items{
+        display:grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(3,1fr);
+        grid-row-gap: 15px;
+        grid-column-gap:15px;
+      }
+      img{
+         width:100%
+      }
+      #items>div{
+         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+         text-align: center;
+      }
+      h3{
+        text-align: center;
+      }
+      p{
+        text-align: center;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div id="navbar">
+      <div>
+        <a href="index.html">Home</a>
+      </div>
+      <div>
+        <a href="cart.html" id="cart">Cart</a>
+        <h3 id="cart_count"></h3>
+      </div>
+    </div>
+    <div id="items">
+      <!-- display cart items here -->
+    </div>
+    <hr />
+    <div id="checkout">
+      <h3>**Checkout**</h3>
+      <input type="text" placeholder="enter Name" id="name">
+      <input type="text" placeholder="enter address" id="address">
+      <button id="checkoutBtn">Checkout</button>
+     <!-- add checkout input fileds here  -->
+    </div>
+    <script src="./src/scripts/cart.js"></script>
+  </body>
+</html>

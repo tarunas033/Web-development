@@ -1,0 +1,63 @@
+
+<script>
+    function MyArray(){
+       this.length = 0;
+
+}
+
+MyArray.prototype.push =  function(el) {
+   let index=this.length;
+   this[index] = el ;
+   return this.length;
+}
+ var arr = new MyArray ();
+
+ MyArray.prototype.pop=function(){
+    this.length-- ;
+    var popElem=this[this.length];
+
+    delete this[this.length];
+    return popElem
+ }
+
+
+ arr.push(1)
+ arr.push(12)
+ arr.push(15)
+ arr.push(18)
+ arr.push(19)
+
+arr.pop()
+console.log('arr',arr);
+
+MyArray.prototype.map = function(cb){
+    var result = new MyArray();
+    for(let key in this){
+        if(this.hasownProperty(key)){
+            result.push(cb(this[key]), key, this)
+        }
+    }
+    return result;
+}
+ var res=arr.map(function(value){
+    console.log(value);
+    return value*value;
+ });
+   console.log(res)
+
+   MyArray.prototype.forEach = function(cb){
+    var result = new MyArray();
+    for(let key in this){
+        if(this.hasownProperty(key)){
+            result.push(cb(this[key]), key, this)
+        }
+    }
+    return result;
+   }
+
+   var res = arr.forEach(function(value){
+    console.log(value);
+    return value* value
+   });
+   console.log(res)
+</script>
