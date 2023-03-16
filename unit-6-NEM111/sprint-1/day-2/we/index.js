@@ -1,4 +1,4 @@
-const [add,Multiply,Subtraction,Divide]= require("./main")
+const {add,Multiply,Subtraction,Divide}= require("./main")
 
 console.log(add,(20,50));
 

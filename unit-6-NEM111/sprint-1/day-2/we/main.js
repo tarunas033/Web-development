@@ -17,4 +17,4 @@ const Subtraction =(a,b) => {
 const Divide =(a,b) => {
     return a / b;
 }
-module.exports=[add,Multiply,Subtraction,Divide];
+module.exports={add,Multiply,Subtraction,Divide};
